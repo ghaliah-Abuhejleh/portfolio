@@ -53,6 +53,7 @@ export default function ContactSection({ links }) {
          href={`${process.env.PUBLIC_URL}/Ghaliah_Abu_Hejleh_CV_026.pdf`}
          target="_blank"
          rel="noreferrer"
+        className="rounded-2xl bg-cyan-500 px-5 py-3 font-semibold text-white shadow-md hover:bg-cyan-400 transition"
         >
         Download CV
         </a>
