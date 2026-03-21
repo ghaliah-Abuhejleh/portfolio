@@ -49,14 +49,13 @@ export default function ContactSection({ links }) {
           >
             Email Me
           </a>
-<a
-  href={`${process.env.PUBLIC_URL}/Ghaliah_Abu_Hejleh_CV_026.htm`}
-  target="_blank"
-  rel="noreferrer"
->
-  Download CV
-</a>
-      
+         <a
+         href={`${process.env.PUBLIC_URL}/Ghaliah_Abu_Hejleh_CV_026.pdf`}
+         target="_blank"
+         rel="noreferrer"
+        >
+        Download CV
+        </a>
         </div>
       </div>
     </section>
