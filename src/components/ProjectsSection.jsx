@@ -58,13 +58,14 @@ export default function ProjectsSection({ githubUsername }) {
           <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
             Featured Work
           </p>
-          <h2 className="mt-2 text-3xl font-bold">Projects</h2>
+          <h2 className="mt-2 text-3xl font-bold">Projects </h2>
+         
         </div>
 
         <div className="hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/60 md:block">
           {isLoading
             ? "Loading repositories and screenshots..."
-            : "Select a project to explore the simulator"}
+            : "App Preview - Select a project to explore the simulator"}
         </div>
       </div>
 

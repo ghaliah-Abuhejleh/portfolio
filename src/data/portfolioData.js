@@ -11,7 +11,7 @@ export const heroSnapshot = {
     },
     {
       label: "Focus",
-      value: "Flutter apps, APIs, scalable UI, offline support",
+      value: "Flutter apps, APIs, scalable UI",
     },
     {
       label: "Strength",

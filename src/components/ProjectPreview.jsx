@@ -14,9 +14,11 @@ export default function ProjectPreview({ project }) {
   const currentImage = images[index];
 
   return (
-    <div className="sticky top-10">
+    
+    <div className="sticky top-2
+    ">
       <div className="rounded-[32px] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-xl">
-        <h3 className="mb-5 text-lg text-white/70">App Preview</h3>
+
 
         <div className="flex justify-center">
           <div className="relative w-[290px] rounded-[3rem] border border-white/15 bg-zinc-950 p-3 shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
@@ -44,13 +46,13 @@ export default function ProjectPreview({ project }) {
             </div>
 
             {images.length > 1 && (
-              <div className="mt-4 flex items-center justify-between text-sm text-white/60">
+              <div className="mt-4 flex items-center justify-between text-sm text-white/60 px-6">
                 <button
                   type="button"
                   onClick={() =>
                     setIndex((prev) => (prev - 1 + images.length) % images.length)
                   }
-                  className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 transition hover:bg-white/10"
+                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 transition hover:bg-white/10"
                 >
                   Prev
                 </button>
@@ -64,7 +66,7 @@ export default function ProjectPreview({ project }) {
                   onClick={() =>
                     setIndex((prev) => (prev + 1) % images.length)
                   }
-                  className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 transition hover:bg-white/10"
+                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 transition hover:bg-white/10"
                 >
                   Next
                 </button>
