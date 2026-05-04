@@ -28,22 +28,22 @@ export const aboutParagraphs = [
 
 export const linkedinPosts = [
   {
-    image: "https://media.licdn.com/dms/image/v2/D4E22AQEtzA1kkeY0Eg/feedshare-shrink_1280/B4EZVNajQuHgAk-/0/1740760562781?e=1775692800&v=beta&t=c4EuIzcJr4ljThEd8nxjpFCWfuwTKaTTatlCVZgeFrU",
-    caption: "Volunteering for Ju Employment Readiness Session",
+    image: `${process.env.PUBLIC_URL}/images/EmployementReadiness.jfif`,
+    caption: "Volunteering for JU Employment Readiness Session",
     url: "https://www.linkedin.com/posts/ghaliah-abu-hejleh-8138bb291_newexperiences-volunteering-activity-7301279023588913153--Ll8",
   },
   {
-    image: "https://media.licdn.com/dms/image/v2/D4D22AQFfGZyWsCasSw/feedshare-shrink_1280/feedshare-shrink_1280/0/1721928778201?e=1775692800&v=beta&t=wKTAnHwn-p1rL-cfFymjY53Viry2aP_5Um-CVqqJ1_g",
-    caption: "Fintech Rally hackathon",
+    image: `${process.env.PUBLIC_URL}/images/FintechRallyHackathon.jfif`,
+    caption: "Fintech Rally Hackathon",
     url: "https://www.linkedin.com/posts/ghaliah-abu-hejleh-8138bb291_fintech-hackathon-innovation-activity-7222292782164414465-cl6L?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbKec8BLY9RQJUeZOaj313MkHvNxG-2eGE",
   },
   {
-    image: "https://media.licdn.com/dms/image/v2/D4E22AQFLyOVYqOHb1g/feedshare-shrink_1280/B4EZbyHqCRGQAk-/0/1747818826464?e=1775692800&v=beta&t=OyRHmSRrrrG1BxK3kK0gKUP1wQCdOX75nuX7KmEFdwA",
-    caption: "Volunteering for BSides Amman ,the first infosec and hacking conference",
+    image: `${process.env.PUBLIC_URL}/images/BsidesVolunteering.jfif`,
+    caption: "Volunteering for BSides Amman, the first infosec and hacking conference",
     url: "https://www.linkedin.com/posts/ghaliah-abu-hejleh-8138bb291_besidesamman2025-cybersecurity-community-activity-7330883537404899328-vNDK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbKec8BLY9RQJUeZOaj313MkHvNxG-2eGE",
   },
   {
-    image: "https://media.licdn.com/dms/image/v2/D4D22AQEtN5PEoAo0iA/feedshare-shrink_1280/feedshare-shrink_1280/0/1704390960260?e=1775692800&v=beta&t=XLyIxa1j2HZjY6nXYRWJe2SYETNtggfm3mrc-6qGsmc",
+    image: `${process.env.PUBLIC_URL}/images/AcmVolunteering.jfif`,
     caption: "Volunteering with ACM University of Jordan Student Chapter",
     url: "https://www.linkedin.com/posts/acmju_amazing-work-from-our-great-podcast-team-ugcPost-7148733830013648897-7Jfw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbKec8BLY9RQJUeZOaj313MkHvNxG-2eGE",
   },
