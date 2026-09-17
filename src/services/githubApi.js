@@ -333,18 +333,28 @@ async function fetchRepoScreenshots(username, repoName) {
 }
 
 async function toProject(username, repo) {
-  const screenshots = await fetchRepoScreenshots(username, repo.name);
+  const screenshots = await fetchRepoScreenshots(
+    username,
+    repo.name
+  );
+
+  const projectType = inferType(repo.name, repo.language);
 
   return {
     title: repo.name,
-    type: inferType(repo.name, repo.language),
-    description: repo.description || "Public GitHub repository.",
+    type: projectType,
+    description:
+      repo.description || "Public GitHub repository.",
     stack: inferStack(repo),
     github: repo.html_url,
     previewText: repo.name,
     screenshots,
     stars: repo.stargazers_count ?? 0,
     updatedAt: repo.updated_at ?? null,
+
+    device: projectType.includes("Web")
+      ? "laptop"
+      : "phone",
   };
 }
 

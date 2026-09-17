@@ -1,13 +1,11 @@
 
+import { Link } from "react-router-dom";
+
 export default function HeroSection({ snapshot }) {
   return (
-    <section className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-8 py-16">
-      
-
-      <div className="mb-8 inline-flex w-fit items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80 shadow-lg backdrop-blur">
-        {snapshot.badge}
-      </div>
-
+   <section  id="home"
+  className="mx-auto flex min-h-screen max-w-7xl scroll-mt-24 flex-col justify-center px-6 pb-20 pt-32 lg:px-10"
+>
       <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_0.7fr]">
     
         <div>
@@ -33,19 +31,19 @@ export default function HeroSection({ snapshot }) {
 
           {/* ACTIONS */}
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#projects"
+            <Link
+              to="/#projects"
               className="rounded-2xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 shadow-xl transition hover:scale-[1.03]"
             >
               View Projects
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              to="/#contact"
               className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
             >
               Contact Me
-            </a>
+            </Link>
           </div>
         </div>
 

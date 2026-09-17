@@ -28,6 +28,11 @@ export const aboutParagraphs = [
 
 export const linkedinPosts = [
   {
+    image: `${process.env.PUBLIC_URL}/images/Certificate of Appreciation.jfif`,
+    caption: "Certificate of Appreciation from Estarta Solutions, presented by the CEO in recognition of my dedication and contribution to our digital transformation journey.",
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7498346415299997696/",
+  },
+  {
     image: `${process.env.PUBLIC_URL}/images/EmployementReadiness.jfif`,
     caption: "Volunteering for JU Employment Readiness Session",
     url: "https://www.linkedin.com/posts/ghaliah-abu-hejleh-8138bb291_newexperiences-volunteering-activity-7301279023588913153--Ll8",
@@ -100,13 +105,103 @@ export const education = {
 
 export const certifications = [
   {
+    title: "React Basics",
+    issuer: "Meta",
+    issued: "Issued Sep 2026",
+    credentialId: "",
+    description:
+      "Covered React fundamentals including components, JSX, props, state, events, hooks, forms, lists, and reusable user interface development.",
+    url: "",
+  },
+  {
+    title: "Artificial Intelligence Fundamentals",
+    issuer: "IBM",
+    issued: "Issued Jun 2026",
+    credentialId: "92733e8e-c5a1-4d01-bcc8-c5e52e92f95b",
+    description:
+      "Covered foundational artificial intelligence concepts, including machine learning, deep learning, natural language processing, computer vision, AI ethics, and practical AI applications.",
+    url: "https://www.credly.com/badges/92733e8e-c5a1-4d01-bcc8-c5e52e92f95b",
+  },
+  {
     title: "Google UX Design Professional Certificate",
     issuer: "Google",
     issued: "Issued Feb 2026",
     credentialId: "YSLK4N6EFEY4",
     description:
-      "Completed seven hands-on courses covering user research, problem definition, ideation, wireframing, prototyping, and usability testing to deliver user-centered solutions.",
+      "Completed eight hands-on courses covering user research, problem definition, ideation, wireframing, prototyping, usability testing, responsive UI design, and career preparation.",
     url: "https://www.coursera.org/account/accomplishments/specialization/certificate/YSLK4N6EFEY4",
+  },
+  {
+    title: "Foundations of User Experience (UX) Design",
+    issuer: "Google",
+    issued: "Issued Feb 2026",
+    credentialId: "ORJUPDFQR6NT",
+    description:
+      "Explored user experience design foundations, accessibility, design thinking, user-centered design, and the responsibilities of UX professionals.",
+    url: "https://www.coursera.org/account/accomplishments/verify/ORJUPDFQR6NT",
+  },
+  {
+    title: "Start the UX Design Process: Empathize, Define, and Ideate",
+    issuer: "Google",
+    issued: "Issued Feb 2026",
+    credentialId: "VXPIGEZVKWYJ",
+    description:
+      "Applied user-centered design techniques including empathy research, problem definition, competitive audits, user stories, and early-stage ideation.",
+    url: "https://coursera.org/verify/VXPIGEZVKWYJ",
+  },
+  {
+    title: "Build Wireframes and Low-Fidelity Prototypes",
+    issuer: "Google",
+    issued: "Issued Feb 2026",
+    credentialId: "8E28CIMJO8NH",
+    description:
+      "Created user flows, storyboards, wireframes, and low-fidelity prototypes based on identified user needs.",
+    url: "https://coursera.org/verify/8E28CIMJO8NH",
+  },
+  {
+    title: "Conduct UX Research and Test Early Concepts",
+    issuer: "Google",
+    issued: "Issued Feb 2026",
+    credentialId: "B0TWMR8UL8YK",
+    description:
+      "Planned and conducted usability studies, analyzed research findings, and improved early design concepts using user feedback.",
+    url: "https://coursera.org/verify/B0TWMR8UL8YK",
+  },
+  {
+    title: "Create High-Fidelity Designs and Prototypes in Figma",
+    issuer: "Google",
+    issued: "Issued Feb 2026",
+    credentialId: "ZN5PAQMN1B6Z",
+    description:
+      "Created mockups and interactive high-fidelity prototypes in Figma while applying visual design principles and accessibility standards.",
+    url: "https://coursera.org/verify/ZN5PAQMN1B6Z",
+  },
+  {
+    title: "Build Dynamic User Interfaces (UI) for Websites",
+    issuer: "Google",
+    issued: "Issued Feb 2026",
+    credentialId: "Q3RTYCGG1RVG",
+    description:
+      "Designed responsive website interfaces while applying progressive enhancement, accessibility, and user-centered design principles.",
+    url: "https://coursera.org/verify/Q3RTYCGG1RVG",
+  },
+  {
+    title: "Design a User Experience for Social Good & Prepare for Jobs",
+    issuer: "Google",
+    issued: "Issued Feb 2026",
+    credentialId: "4T21G3QJGUFX",
+    description:
+      "Designed an end-to-end user experience for a social-good project and developed portfolio and career-readiness skills.",
+    url: "https://coursera.org/verify/4T21G3QJGUFX",
+  },
+  {
+    title: "Accelerate Your Job Search with AI",
+    issuer: "Google",
+    issued: "Issued Feb 2026",
+    credentialId: "CLLD3ERD0DVM",
+    description:
+      "Applied AI tools to job searching, professional positioning, application preparation, and career development.",
+    url: "https://coursera.org/verify/CLLD3ERD0DVM",
   },
   {
     title: "The Complete Flutter Development Bootcamp with Dart",
@@ -114,7 +209,7 @@ export const certifications = [
     issued: "Issued Aug 2024",
     credentialId: "UC-7a9d3167-93e1-490a-aeaa-92557639630e",
     description:
-      "Built multiple Flutter apps while learning core concepts including state management, UI composition, navigation, and API integration using Dart.",
+      "Built multiple Flutter applications while learning state management, UI composition, navigation, API integration, and Dart fundamentals.",
     url: "https://www.udemy.com/certificate/UC-7a9d3167-93e1-490a-aeaa-92557639630e/",
   },
   {
@@ -123,7 +218,7 @@ export const certifications = [
     issued: "Completed",
     credentialId: "",
     description:
-      "Strengthened front-end and full-stack foundations across web development concepts and tooling.",
+      "Strengthened front-end and full-stack development foundations using HTML, CSS, JavaScript, Node.js, databases, and modern web development tools.",
     url: "",
   },
 ];
