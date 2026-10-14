@@ -19,27 +19,27 @@ export default function HeroSection({ snapshot }) {
 
     
           <h2 className="mt-4 max-w-3xl text-2xl font-semibold text-white/80 sm:text-3xl">
-            Flutter Engineer building scalable, production-ready mobile experiences.
+           Software Engineer turning complex ideas into seamless digital experiences.
           </h2>
 
           {/* DESCRIPTION */}
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75">
-            I specialize in Flutter development, API integration, and creating
-            clean, user-focused applications. I turn complex business needs into
-            simple, intuitive products that perform reliably in real-world use.
+           I build scalable mobile and web applications using Flutter and React.js, transforming complex business requirements into intuitive, reliable solutions. I care about clean architecture, thoughtful user experiences, and building products that make a real difference.
           </p>
 
           {/* ACTIONS */}
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              to="/#projects"
+              to="/"
+              state={{ section: "projects" }}
               className="rounded-2xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 shadow-xl transition hover:scale-[1.03]"
             >
               View Projects
             </Link>
 
             <Link
-              to="/#contact"
+              to="/"
+              state={{ section: "contact" }}
               className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
             >
               Contact Me
@@ -55,9 +55,9 @@ export default function HeroSection({ snapshot }) {
           <div className="relative rounded-[32px] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-xl">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-lg font-semibold">Quick Snapshot</h2>
-              <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-sm text-emerald-300">
+              {/* <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-sm text-emerald-300">
                 Available for opportunities
-              </span>
+              </span> */}
             </div>
 
             <div className="space-y-4 text-white/80">

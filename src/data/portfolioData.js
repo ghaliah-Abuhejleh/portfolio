@@ -1,9 +1,14 @@
+
 export const heroSnapshot = {
-  badge: "Software Engineer • Flutter Developer",
+  badge: "Software Engineer | Flutter & React Developer",
+
   eyebrow: "Hi, I’m ",
-  title: "I build clean, modern, and user-focused mobile experiences.",
+
+  title: "Building scalable, production-ready mobile and web applications.",
+
   description:
-    "Detail-oriented Software Engineer with hands-on experience building and deploying mobile and web applications, specializing in Flutter, API integration, and practical user-focused solutions.",
+    "I specialize in Flutter and React.js development, transforming complex business requirements into intuitive, reliable digital experiences. I focus on clean code, seamless API integration, and building applications that solve real-world problems.",
+
   cards: [
     {
       label: "Current Role",
@@ -11,20 +16,25 @@ export const heroSnapshot = {
     },
     {
       label: "Focus",
-      value: "Flutter apps, APIs, scalable UI",
+      value: "Flutter, React.js & Enterprise Applications",
     },
     {
-      label: "Strength",
-      value:
-        "Clean implementation, debugging, and translating business needs into product features",
+      label: "Beyond Coding",
+      value: "Trained & Mentored 20+ Developers",
     },
   ],
 };
 
+
+
 export const aboutParagraphs = [
-  "I’m a Software Engineer based in Amman with experience building and deploying mobile and web applications. My work centers on Flutter development, API integration, state management, and creating responsive, maintainable interfaces.",
-  "I enjoy solving practical product problems, optimizing performance, and turning business requirements into polished user-focused experiences while growing within agile teams.",
+  "I’m a Software Engineer based in Amman, Jordan, with 2+ years of professional experience developing enterprise mobile and web applications using Flutter and React.js. At Estarta Solutions, I work on Human Resource Management System (HRMS) and Contact Management System (CMS) solutions across mobile and web platforms, as well as React-based onboarding applications.",
+
+  "My work involves building responsive interfaces, integrating RESTful APIs, managing application state, and delivering reliable, maintainable solutions. I enjoy translating complex business requirements into intuitive digital experiences.",
+
+  "Beyond development, I’m passionate about knowledge sharing and mentorship. I’ve trained and guided over 20 interns in Flutter and web development, helping them build practical skills through hands-on projects, code reviews, and technical guidance.",
 ];
+
 
 export const linkedinPosts = [
   {

@@ -46,7 +46,7 @@ export default function ContactSection({ links }) {
             </a>
 
             <a
-              href={`${process.env.PUBLIC_URL}/Ghaliah_Abu_Hejleh_CV_026.pdf`}
+              href={`${process.env.PUBLIC_URL}/Ghaliah_Abu_Hejleh_2026.pdf`}
               target="_blank"
               rel="noreferrer"
               className="rounded-xl bg-cyan-500 px-4 py-2.5 font-semibold text-white shadow-md transition hover:bg-cyan-400"
@@ -59,7 +59,8 @@ export default function ContactSection({ links }) {
         <div className="flex flex-col gap-2 border-t border-white/10 py-3 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Ghaliah Abuhejleh</p>
           <Link
-            to="/#home"
+            to="/"
+            state={{ section: "home" }}
             className="transition hover:text-cyan-300"
           >
             Back to top ↑
