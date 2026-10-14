@@ -15,7 +15,10 @@ export default function ProjectsSection({ githubUsername }) {
 
     async function loadProjects() {
       setIsLoading(true);
-      const items = await fetchGithubProjects(githubUsername);
+      const fetchedProjects = await fetchGithubProjects(githubUsername);
+      const items = fetchedProjects.filter(
+        (project) => project.title.toLowerCase() !== "portfolio"
+      );
 
       if (!mounted) return;
 
@@ -52,7 +55,7 @@ export default function ProjectsSection({ githubUsername }) {
   }, [displayedProjects, selectedProject]);
 
   return (
-    <section id="projects" className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+    <section id="projects" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-16 lg:px-10">
       <div className="mb-8 flex items-end justify-between gap-4">
         <div>
           <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">

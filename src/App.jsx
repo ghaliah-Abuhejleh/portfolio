@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -23,20 +23,22 @@ import {
 } from "./data/portfolioData";
 
 function ScrollToSection() {
-  const { hash, pathname } = useLocation();
+  const { state, pathname, key } = useLocation();
+  const section = state?.section;
 
   useEffect(() => {
-    if (!hash) {
+    if (!section) {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    requestAnimationFrame(() => {
-      document.getElementById(hash.slice(1))?.scrollIntoView({
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(section)?.scrollIntoView({
         behavior: "smooth",
       });
     });
-  }, [hash, pathname]);
+    return () => cancelAnimationFrame(frame);
+  }, [section, pathname, key]);
 
   return null;
 }
@@ -74,7 +76,7 @@ function CertificatesPage() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={new URL(process.env.PUBLIC_URL || "/", window.location.origin).pathname}>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
         <ScrollToSection />
         <Header />
@@ -87,6 +89,6 @@ export default function App() {
 
         <ContactSection links={contactLinks} />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

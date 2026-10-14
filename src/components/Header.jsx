@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const pageLinks = [
   ["Home", "/"],
-  ["Projects", "/#projects"],
+  ["Projects", "/", "projects"],
   ["Experience", "/experience"],
   ["Certificates", "/certificates"],
-  ["Contact Me", "/#contact"],
+  ["Contact Me", "/", "contact"],
 ];
 
 export default function Header() {
@@ -14,17 +14,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const lastScrollY = useRef(0);
 
-  const handleLinkClick = (href) => {
+  const handleLinkClick = () => {
     setIsOpen(false);
-
-    const sectionId = href.split("#")[1];
-    if (sectionId) {
-      requestAnimationFrame(() => {
-        document.getElementById(sectionId)?.scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    }
   };
 
   useEffect(() => {
@@ -59,17 +50,19 @@ export default function Header() {
       <div className="flex items-center justify-between">
         <NavLink
           to="/"
+          onClick={handleLinkClick}
           className="text-lg font-bold tracking-tight text-white"
         >
           Ghaliah Abu Hejleh<span className="text-cyan-300">.</span>
         </NavLink>
 
         <div className="hidden items-center gap-8 md:flex">
-          {pageLinks.map(([label, href]) => (
+          {pageLinks.map(([label, href, section]) => (
             <NavLink
-              key={href}
+              key={label}
               to={href}
-              onClick={() => handleLinkClick(href)}
+              state={section ? { section } : null}
+              onClick={handleLinkClick}
               className="text-sm text-white/65 transition hover:text-cyan-300"
             >
               {label}
@@ -104,11 +97,12 @@ export default function Header() {
 
       {isOpen && (
         <div className="mt-5 grid gap-2 border-t border-white/10 pt-4 md:hidden">
-          {pageLinks.map(([label, href]) => (
+          {pageLinks.map(([label, href, section]) => (
             <NavLink
-              key={href}
+              key={label}
               to={href}
-              onClick={() => handleLinkClick(href)}
+              state={section ? { section } : null}
+              onClick={handleLinkClick}
               className="rounded-xl px-3 py-2 text-sm text-white/75 transition hover:bg-white/5 hover:text-cyan-300"
             >
               {label}
