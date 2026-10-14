@@ -58,10 +58,18 @@ function CredentialLink({ certificate, compact = false }) {
 
 function CertificationCard({ certificate }) {
   const [expanded, setExpanded] = useState(false);
+  const reduceMotion = useReducedMotion();
   const coursesId = useId();
   const courses = certificate.courses || [];
   return (
-    <article className="flex h-full min-w-0 flex-col rounded-2xl border border-white/10 bg-black/20 p-5 transition-colors hover:border-cyan-300/30 motion-reduce:transition-none sm:p-6">
+    <motion.article
+      className="flex h-full min-w-0 flex-col rounded-2xl border border-white/10 bg-black/20 p-5 transition-colors hover:border-cyan-300/30 motion-reduce:transition-none sm:p-6"
+      initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+      whileHover={reduceMotion ? undefined : { y: -3, transition: { duration: 0.2 } }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: reduceMotion ? 0 : 0.5, ease: "easeOut" }}
+    >
       <div className="flex flex-1 items-start gap-4">
         <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white p-2.5 sm:h-14 sm:w-14">
           <img
@@ -113,7 +121,7 @@ function CertificationCard({ certificate }) {
           ))}
         </ol>
       </Collapsible>
-    </article>
+    </motion.article>
   );
 }
 
