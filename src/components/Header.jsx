@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const pageLinks = [
   ["Home", "/"],
@@ -10,6 +10,7 @@ const pageLinks = [
 ];
 
 export default function Header() {
+  const { pathname, search } = useLocation();
   const [isVisible, setIsVisible] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const lastScrollY = useRef(0);
@@ -60,7 +61,7 @@ export default function Header() {
           {pageLinks.map(([label, href, section]) => (
             <NavLink
               key={label}
-              to={href}
+              to={section === "contact" ? { pathname, search } : href}
               state={section ? { section } : null}
               onClick={handleLinkClick}
               className="text-sm text-white/65 transition hover:text-cyan-300"
@@ -100,7 +101,7 @@ export default function Header() {
           {pageLinks.map(([label, href, section]) => (
             <NavLink
               key={label}
-              to={href}
+              to={section === "contact" ? { pathname, search } : href}
               state={section ? { section } : null}
               onClick={handleLinkClick}
               className="rounded-xl px-3 py-2 text-sm text-white/75 transition hover:bg-white/5 hover:text-cyan-300"

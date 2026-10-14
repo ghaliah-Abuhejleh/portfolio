@@ -66,7 +66,7 @@ export const linkedinPosts = [
 
 export const experiences = [
   {
-    title: "Software Engineer – Flutter • Estarta Solutions",
+    title: "Software Engineer – Flutter & React • Estarta Solutions",
     period: "Aug 2024 – Present • Amman, Jordan",
     bullets: [
       "Worked on HRMS and CMS applications, handling UI, API integration, and offline support.",
@@ -75,7 +75,20 @@ export const experiences = [
       "Used BLoC and Provider for state management; integrated APIs and third-party packages.",
       "Managed code with Git, deployed via Azure, and followed Agile and Kanban practices.",
       "Deployed applications on App Store, Google Play, and Huawei AppGallery.",
+      "Developed and maintained React-based web interfaces for HRMS and CMS, supporting enterprise workflows and administrative features.",
+      "Contributed to an external web onboarding project with request forms, manager views, approval workflows, validation, and document review using React, Redux, Material UI, React Hook Form, and Yup.",
+      "Integrated frontend components with REST APIs and resolved issues involving dependent dropdowns, form defaults, and data presentation.",
       "Developed a mobile development training curriculum and mentored interns from fundamentals to real-world application.",
+      "Delivered Flutter and web development training to 20+ interns, preparing practical assignments, reviewing technical work, and providing individual feedback and evaluations.",
+    ],
+  },
+  {
+    title: "Software Developer • Qahwa BLK Hackathon",
+    period: "14 Aug 2026",
+    bullets: [
+      "Contributed to mobile application development during the hackathon, translating project ideas into practical solutions.",
+      "Ranked among the Top 10 finalists out of 30 competing teams in the Qahwa BLK Hackathon.",
+      "Participated in Replit training, project planning, and brainstorming sessions to propose enhancements to the Qahwa BLK platform.",
     ],
   },
   {
