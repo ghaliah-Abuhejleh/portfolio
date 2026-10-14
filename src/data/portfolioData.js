@@ -113,15 +113,33 @@ export const education = {
   meta: "Jul 2024 • GPA 3.47/4",
 };
 
-export const certifications = [
+const certificationRecords = [
+  {
+    title: "Meta React Specialization",
+    issuer: "Meta",
+    issued: "Issued Sep 2026",
+    credentialId: "V6CQAYTNSVB1",
+    description:
+      "Completed the Meta React Specialization, developing skills in React and front-end development.",
+    url: "https://www.coursera.org/account/accomplishments/specialization/V6CQAYTNSVB1",
+  },
   {
     title: "React Basics",
     issuer: "Meta",
     issued: "Issued Sep 2026",
-    credentialId: "",
+    credentialId: "KIU7YIKEF9Y4",
     description:
       "Covered React fundamentals including components, JSX, props, state, events, hooks, forms, lists, and reusable user interface development.",
-    url: "",
+    url: "https://www.coursera.org/account/accomplishments/records/KIU7YIKEF9Y4",
+  },
+  {
+    title: "Advanced React",
+    issuer: "Meta",
+    issued: "Issued Sep 2026",
+    credentialId: "D9NZ0QL9L2RC",
+    description:
+      "Completed Meta's Advanced React course, further developing React skills.",
+    url: "https://www.coursera.org/account/accomplishments/records/D9NZ0QL9L2RC",
   },
   {
     title: "Artificial Intelligence Fundamentals",
@@ -231,6 +249,41 @@ export const certifications = [
       "Strengthened front-end and full-stack development foundations using HTML, CSS, JavaScript, Node.js, databases, and modern web development tools.",
     url: "",
   },
+];
+
+const certificationGroups = {
+  V6CQAYTNSVB1: ["KIU7YIKEF9Y4", "D9NZ0QL9L2RC"],
+  YSLK4N6EFEY4: [
+    "ORJUPDFQR6NT", "VXPIGEZVKWYJ", "8E28CIMJO8NH", "B0TWMR8UL8YK",
+    "ZN5PAQMN1B6Z", "Q3RTYCGG1RVG", "4T21G3QJGUFX", "CLLD3ERD0DVM",
+  ],
+};
+const certificatesWithIds = certificationRecords.map((certificate) => ({
+  ...certificate,
+  id: certificate.credentialId || certificate.title.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+}));
+const groupedCourseIds = new Set(Object.values(certificationGroups).flat());
+const featuredCertificateIds = [
+  "V6CQAYTNSVB1", "YSLK4N6EFEY4",
+  "UC-7a9d3167-93e1-490a-aeaa-92557639630e",
+  "92733e8e-c5a1-4d01-bcc8-c5e52e92f95b",
+];
+const topLevelCertificates = certificatesWithIds
+  .filter((certificate) => !groupedCourseIds.has(certificate.id))
+  .map((certificate) => ({
+    ...certificate,
+    courses: (certificationGroups[certificate.id] || []).map((id) =>
+      certificatesWithIds.find((course) => course.id === id)
+    ),
+  }));
+
+export const certifications = [
+  ...featuredCertificateIds.map((id) =>
+    topLevelCertificates.find((certificate) => certificate.id === id)
+  ),
+  ...topLevelCertificates.filter(
+    (certificate) => !featuredCertificateIds.includes(certificate.id)
+  ),
 ];
 
 export const skills = {
