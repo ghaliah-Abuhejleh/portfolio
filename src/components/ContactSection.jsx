@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function ContactSection({ links }) {
+  const { pathname, search } = useLocation();
   return (
     <footer
       id="contact"
@@ -59,8 +60,8 @@ export default function ContactSection({ links }) {
         <div className="flex flex-col gap-2 border-t border-white/10 py-3 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Ghaliah Abuhejleh</p>
           <Link
-            to="/"
-            state={{ section: "home" }}
+            to={{ pathname, search }}
+            state={null}
             className="transition hover:text-cyan-300"
           >
             Back to top ↑
